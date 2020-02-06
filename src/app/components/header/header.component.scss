@@ -1,0 +1,16 @@
+@import '../../../assets/styles/variables.scss';
+
+.toolbar {
+  height: 60px;
+  margin: -8px;
+  display: flex;
+  align-items: center;
+  background-color: $header-bg-col;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}

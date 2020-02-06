@@ -1,0 +1,48 @@
+@import '../../../assets/styles/variables.scss';
+
+.wrapper {
+  width: 800px;
+  max-width: 90vw;
+  margin-top: 24px;
+  padding: 36px;
+  max-height: calc(100vh - 400px);
+  overflow: scroll;
+  background-color: $rocket-smoke-col;
+  border-radius: 5px;
+}
+
+
+.participants-list {
+  color: $header-bg-col;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    .name {
+      font-size: 1.4em;
+      margin-bottom: 6px;
+    }
+    .motivation {
+      font-size: 1.2em;
+      opacity: 0.8;
+      margin-bottom: 12px;
+    }
+  }
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 1100px) {
+  .wrapper {
+    width: 600px;
+    padding-left: 36px;
+  }
+}
+@media screen and (max-width: 740px) {
+  .wrapper {
+    width: 500px;
+  }
+}

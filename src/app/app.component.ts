@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'participation-survey';
+  title = 'Angular Go';
+  showResults = false;
+
+  constructor() {}
+
+  toggleResults() {
+    this.showResults = !this.showResults;
+  }
 }

@@ -1,0 +1,81 @@
+@import '../../../styles.scss';
+
+.card {
+  border-radius: 4px;
+  height: 16px;
+  width: auto;
+  min-width: 220px;
+  margin: 0 8px 16px;
+  padding: 16px;
+  user-select: none;
+
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  line-height: 24px;
+  outline: none;
+  color: #fefefe;
+  border: 1px solid rgba(0,0,0,0.05);
+  font-weight: 600;
+
+  span {
+    margin-left: 60px;
+    text-transform: uppercase;
+  }
+  background: linear-gradient(-45deg, #ee7752, #C52B2B, #003459, #E3E7AF);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  transition: all 0.2s ease-out;
+}
+
+.highlight {
+  position: absolute;
+  width: calc(100% - 86px);
+  right: 9px;
+  height: 75%;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.highlight:hover + .card {
+  font-size: larger;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 1% 50%;
+  }
+  50% {
+    background-position: 99% 50%;
+  }
+  100% {
+    background-position: 1% 50%;
+  }
+}
+
+svg#rocket {
+  width: 80px;
+  position: absolute;
+  left: -10px;
+  top: -24px;
+}
+
+svg#rocket-smoke {
+  height: 100vh;
+  position: absolute;
+  top: 10px;
+  right: 150px;
+  z-index: -10;
+  color: $rocket-smoke-col;
+  background-color: $background;
+}
+
+@media screen and (max-width: 575px) {
+  svg#rocket-smoke {
+    display: none;
+    visibility: hidden;
+  }
+}

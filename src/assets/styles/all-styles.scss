@@ -1,0 +1,8 @@
+@import './variables.scss';
+@import './cards.scss';
+
+body {
+  background: $background;
+  min-height: 120vh;
+  overflow: hidden;
+}

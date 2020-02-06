@@ -1,0 +1,8 @@
+<div class="wrapper" *ngIf="surveyResult$ | async as result">
+  <ul class="participants-list" *ngFor="let el of dummy">
+    <li *ngFor="let submission of result.submissions">
+      <div class="name">{{submission.name}}</div>
+      <div class="motivation">{{submission.motivation}}</div>
+    </li>
+  </ul>
+</div>

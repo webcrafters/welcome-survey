@@ -11,7 +11,7 @@ export class SurveyService {
   constructor(private http: HttpClient) {}
 
   getSurveyResults(): Observable<SurveyResult> {
-    return this.http.get<any>('http://localhost:3001').pipe(
+    return this.http.get<any>('https://welcome-survey-backend.herokuapp.com/').pipe(
       catchError(err => {
         console.error(err);
         return err;
